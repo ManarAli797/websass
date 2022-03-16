@@ -1,0 +1,118 @@
+/* Start Footer */
+.footer {
+    background-color: #e2e2e2;
+    overflow-x: hidden;
+    padding-top: 30px;
+    margin-top: 50px;
+    .gallery, .info, .contact {
+        float: $float-left;
+    }
+    .gallery {
+        @media #{$minSmall}  {
+            width: 100%;
+        }
+         @media #{$minMedium} {
+            width: 50%;
+        }
+         @media  #{$maxMobile} {
+           width: 100%;
+        }
+        .img-box {
+            overflow: hidden;
+            margin-bottom: 20px;
+            img {
+                @media #{$minSmall}  {
+                    float: $float-left;
+                }
+                width: 100px;
+                height: 100px;
+            }
+            .text {
+                @media #{$minSmall}  {
+                    float: $float-left;
+                    width: calc(100% - 130px); /*100 px for img and 30 margin left ,right*/
+                    margin-left: 15px;;
+                    margin-right: 15px;
+                }
+                h4 {
+                    color: $redColor;
+                    margin: 20px 0 0px;
+                }
+                p {
+                    color: #888;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+    .info {
+        @media #{$minSmall}  {
+            width: 50%;
+        }
+         @media #{$minMedium} {
+            width: 25%;
+        }
+        ul {
+            color: #888;
+            line-height: 1.6;
+            li {
+                span {
+                    color: $redColor;
+                    font-weight: bold;
+                }
+            }
+        }
+        h4 {
+            color: #888;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        P {
+            color: #888;
+            margin-top: 5px;
+        }
+    }
+    .contact {
+        @media #{$minSmall}  {
+            width: 50%;
+        }
+         @media #{$minMedium} {
+            width: 25%;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            border: 1px solid $grayColor;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            width: 100%;
+        }
+    }
+    .section-title {
+        color: #444;
+        font-weight: normal;
+    }
+    .copyright {
+        border-top: 1px solid $grayColor;
+        padding: 25px 0;
+        overflow: hidden;
+        color: #888;
+        margin-top: 30px;
+        .text,.author {
+            float: $float-left;
+            width: 50%;
+            @media #{$maxMobile}{
+                float: none;
+            }
+        }
+        .author {
+            text-align: $text-right;
+            @media #{$maxMobile}{
+                text-align: $float-left;
+            }
+        }
+    }
+}
+
+/* End Footer */
